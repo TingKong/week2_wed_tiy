@@ -16,25 +16,41 @@ namespace track_emply
         protected string lN;
         protected string changeName;
         protected string name;
+        protected string firstN;
+        protected string lastN;
+        
 
-        public string Name
+        public string FirstN
         {
             get
             {
-                return name;
+                return firstN;
             }
             set
             {
-                name = value;
+                firstN = value;
             }
         }
+
+
+        public string LastN
+        {
+            get
+            {
+                return lastN;
+            }
+            set
+            {
+                lastN = value;
+            }
+        }
+
 
         public virtual void ChangeName(string firstName, string lastName)
         {
             this.fN = firstName;
             this.lN = lastName;
 
-            string x = lastName + " " + firstName ;
             
 
         }

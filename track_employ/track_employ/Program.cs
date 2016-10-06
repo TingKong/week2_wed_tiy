@@ -13,8 +13,8 @@ namespace track_employ
             Depart myDeptN = new Depart();
             
             myDeptN.DeptName = "Project Managers";
+            myDeptN.ChangeDeptName("Project Managers");
             
-            //myDeptN.Chan
             //myDeptN2.DeptName = "Front End Developers";
             Console.WriteLine("We have two departments:" + myDeptN + " and " + myDeptN );
 

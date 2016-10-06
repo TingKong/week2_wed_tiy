@@ -6,36 +6,30 @@ using System.Threading.Tasks;
 
 namespace track_emply
 {
-    public class Depart : People
+    public class Depart
     {
-        //Properties
-        //Manager name
-        //Location
-        //Method(override)
-        //Change name
+        string deptName;
+        string managerName;
+        string location;
 
-        //    string deptName;
-        //    string managerName;
-        //    string location;
+        public string DeptName
+        {
+            get
+            {
+                return deptName;
+            }
+            set
+            {
+                deptName = value;
+            }
+        }
 
-        //    public string DeptName
-        //    {
-        //        get
-        //        {
-        //            return deptName;
-        //        }
-        //        set
-        //        {
-        //            deptName = value;
-        //        }
-        //    }
+        public virtual void ChangeDeptName(string newDeptName)
+        {
 
-        //    public virtual void ChangeDeptName(string newDeptName)
-        //    {
-
-        //       deptName = newDeptName;s
-        //    }
-        //}
-
+            deptName = newDeptName;
+        }
     }
+
 }
+
