@@ -91,10 +91,11 @@ namespace track_emply
             
         }
 
-        public virtual void Fired()
+        public virtual bool Fired()
         {
 
-           termDate = DateTime.Today; 
+           termDate = DateTime.Today;
+            return true;
         }
 
         public void Raise(Double money)

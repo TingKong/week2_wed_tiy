@@ -68,13 +68,17 @@ namespace track_emply
             employee3.Hired(employee3.DateHired);
             employee4.DateHired = DateTime.Today.AddYears(-1);
 
+            //Fired Employee
+            employee1.DateHired = DateTime.Today.AddYears(-3);
+            employee1.TermDate = DateTime.Today;
+
 
             Console.WriteLine();
-            Console.WriteLine( employee3.FirstN + " " + employee3.LastN + " " + "received a promotion from grade 20 to /n" + employee3.Grade + "  and a 4% raise making his total salary " + employee3.PayRate);
+            Console.WriteLine( employee3.FirstN + " " + employee3.LastN + " " + "received a promotion from grade 20 to " + employee3.Grade + "  and a 4% raise making his total salary " + employee3.PayRate);
             Console.WriteLine(employee3.FirstN + " was hired in on" + employee3.DateHired.ToShortDateString());
-            Console.WriteLine(employee4.FirstN + " " + employee4.LastN + " received a promotion from grade 10 to /n" + employee4.Grade + " and a 4% raise making his total salary " + employee4.PayRate);
+            Console.WriteLine(employee4.FirstN + " " + employee4.LastN + " received a promotion from grade 10 to " + employee4.Grade + " and a 4% raise making his total salary " + employee4.PayRate);
             Console.WriteLine(employee4.FirstN + " was hired in on " + employee4.DateHired.ToShortDateString());
-
+            Console.WriteLine(employee1.FirstN + employee1.LastN + " was hired in on " + employee1.DateHired.ToShortDateString() + "  and terminated on " + employee1.TermDate.ToShortDateString());
             Console.WriteLine();
 
             Utils.Pay(myArray);
