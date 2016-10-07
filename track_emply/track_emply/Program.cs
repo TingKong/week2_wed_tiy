@@ -36,17 +36,17 @@ namespace track_emply
             employee4.LastN = "Lightyear";
             employee5.FirstN = "Winnie";
             employee5.LastN = "Pooh";
+
             //Changing employee 5's name
             employee5.ChangeName("Lama", "TheGreat");
 
+            //Array of Employees
             Employ[] myArray = new Employ[5];
             myArray[0] = employee1;
             myArray[1] = employee2;
-
-
-
-
-            Console.WriteLine(employee1.FirstN + " " + employee1.LastN);
+            myArray[2] = employee3;
+            myArray[3] = employee4;
+            myArray[4] = employee5;
 
             //Grade Employee
             employee1.Grade = 9;
@@ -55,17 +55,28 @@ namespace track_emply
             employee4.Grade = 10;
             employee5.Grade = 8;
 
-
             //Promoting Employee
-            //Square square2 = new Square(5);
-            //double valueOfAreaCalculation = square2.Area();
-
-            double employ4Raise = employee3.Raise(120000);
+            employee3.PayRate = 120000;
+            employee3.Raise(employee3.PayRate);
             employee3.ChangeGrade(25);
-            //get and set
+            employee4.PayRate = 60000;
+            employee4.Raise(employee3.PayRate);
+            employee4.ChangeGrade(13);
 
-            Console.WriteLine(employ4Raise);
-            Console.WriteLine("Wall-E received a promotion from grade 20 to "+ employee3.Grade + " and a 4% raise making his total salary " + employ4Raise );
+            //Hired Employee
+            employee3.DateHired = DateTime.Today;
+            employee3.Hired(employee3.DateHired);
+            employee4.DateHired = DateTime.Today.AddYears(-1);
+
+
+            Console.WriteLine();
+            Console.WriteLine( employee3.FirstN + " " + employee3.LastN + " " + "received a promotion from grade 20 to /n" + employee3.Grade + "  and a 4% raise making his total salary " + employee3.PayRate);
+            Console.WriteLine(employee3.FirstN + " was hired in on" + employee3.DateHired.ToShortDateString());
+            Console.WriteLine(employee4.FirstN + " " + employee4.LastN + " received a promotion from grade 10 to /n" + employee4.Grade + " and a 4% raise making his total salary " + employee4.PayRate);
+            Console.WriteLine(employee4.FirstN + " was hired in on " + employee4.DateHired.ToShortDateString());
+
+            Console.WriteLine();
+
             Utils.Pay(myArray);
 
 

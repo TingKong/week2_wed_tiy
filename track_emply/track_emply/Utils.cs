@@ -10,11 +10,11 @@ namespace track_emply
     {
         public static void Pay(Employ[] newArray)
         {
-            for (int i = 0; i< newArray.Length; i++)
+            for (int i = 0; i < newArray.Length; i++)
             {
-                Console.WriteLine(newArray[i].FirstN + "got paid");
+                Console.WriteLine(newArray[i].FirstN + " " + newArray[i].LastN + " got paid");
             }
-           
+
         }
     }
 }
